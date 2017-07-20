@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TODO: Make all entrypoint.sh like 3-multi-tenant
+# TODO: Make all entrypoint.sh like 3-multi-tenant
 
 OUTPUT_DIR=/x509
 CONF_DIR=/conf
