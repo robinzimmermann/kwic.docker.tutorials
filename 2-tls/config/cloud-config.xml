@@ -15,7 +15,7 @@
       <socks.mode>reverse</socks.mode>
       <socks.transport>wss://example.com/kwic</socks.transport>
       <ws.inactivity.timeout>55 seconds</ws.inactivity.timeout>
-      <!-- <socks.ssl.verify-client>required</socks.ssl.verify-client> -->
+      <socks.ssl.verify-client>required</socks.ssl.verify-client>
     </connect-options>
   </service>
 
@@ -29,7 +29,7 @@
 
     <accept-options>
       <ws.inactivity.timeout>55 seconds</ws.inactivity.timeout>
-      <!-- <ssl.verify-client>required</ssl.verify-client> -->
+      <ssl.verify-client>required</ssl.verify-client>
     </accept-options>
   </service>
 
