@@ -1,20 +1,15 @@
-# Kaazing Gateway Docker Tutorials
+# KWIC Docker Tutorials
 
-This repository provides examples of different Kaazing Gateway deployment scenarios. For ease of use and portability, these scenarios are provided using Docker.
+This repository provides examples of different KWIC deployment scenarios. For ease of use and portability, these scenarios are provided using Docker.
 
-## Deployment Scenarios
+Kaazing WebSocket Intercloud Connect (KWIC) delivers highly secure, hybrid cloud connectivity – with no hardware required. KWIC enables rapid delivery of new applications and services in the cloud while securely connecting to your existing infrastructure, and makes costly and time-intensive site-to-site VPNs between your data center and the public cloud no longer necessary.
 
-Each subdirectory contains a scenario and instructions on how to run the setup locally.
+The following tutorials are available:
 
-* [KWIC](kwic) (Kaazing WebSocket Intercloud Connect)
-* [Broadcasting TCP Data to WebSocket Clients](broadcast)
-* [Enable WSS (WebSocket over TLS)](wss)
-* [Authenticating Users](user-auth)
-* [AMQP and WebSocket](AMQP)
-* [JMS and WebSocket](JMS)
-* [Securing Your Deployments With Enterprise Shield&trade; (Firewall with no open ports for any service)](enterprise-shield)
-* HTTP Proxy - example coming soon.
-* High Availability and Clustering - example coming soon.
+* [1-simple](1-simple) – Get started with a simple KWIC scenario.
+* [2-tls](2-tls) – Demonstrate securing KWIC with TLS/SSL.
+* [3-multi-tenant](3-multi-tenant) – Demonstrate using KWIC in a multi-tenant scenario, including TLS/SSL.
+* [4-ha](4-ha) – Demonstrate configuring KWIC for HA (High Availability), including TLS/SSL.
 
 ## Requirements
 
