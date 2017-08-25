@@ -6,7 +6,7 @@
     <name>proxy service C</name>
 
     <accept>pipe://serviceC</accept>
-    <connect>tcp://server-a:5551</connect>
+    <connect>tcp://server-c:5551</connect>
 
     <type>proxy</type>
 
