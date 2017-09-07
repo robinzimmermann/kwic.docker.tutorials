@@ -4,6 +4,8 @@ services:
 
   example.com:
     image: kaazing/enterprise-gateway:5.7.2
+    environment:
+      GATEWAY_OPTS: "-Dcom.kaazing.kwic.logging=on"
     volumes:
       - ./config/cloud-config.xml:/kaazing-gateway/conf/gateway-config.xml:ro
       - ./config/log4j-config.xml:/kaazing-gateway/conf/log4j-config.xml:ro
@@ -15,6 +17,8 @@ services:
 
   onprem:
     image: kaazing/enterprise-gateway:5.7.2
+    environment:
+      GATEWAY_OPTS: "-Dcom.kaazing.kwic.logging=on"
     volumes:
       - ./config/onprem-config.xml:/kaazing-gateway/conf/gateway-config.xml:ro
       - ./config/log4j-config.xml:/kaazing-gateway/conf/log4j-config.xml:ro
