@@ -15,6 +15,7 @@
       <socks.mode>reverse</socks.mode>
       <socks.transport>ws://example.com/kwic</socks.transport>
       <ws.inactivity.timeout>55 seconds</ws.inactivity.timeout>
+      <http.transport>tcp://@eth0:80</http.transport>
     </connect-options>
   </service>
 
@@ -29,6 +30,7 @@
 
     <accept-options>
       <ws.inactivity.timeout>55 seconds</ws.inactivity.timeout>
+      <http.transport>tcp://@eth0:80</http.transport>
     </accept-options>
   </service>
 
@@ -46,6 +48,7 @@
       <socks.mode>reverse</socks.mode>
       <socks.transport>ws://example.com/kwic</socks.transport>
       <ws.inactivity.timeout>55 seconds</ws.inactivity.timeout>
+      <http.transport>tcp://@eth0:80</http.transport>
     </connect-options>
   </service>
 
@@ -60,6 +63,7 @@
 
     <accept-options>
       <ws.inactivity.timeout>55 seconds</ws.inactivity.timeout>
+      <http.transport>tcp://@eth0:80</http.transport>
     </accept-options>
   </service>
 
