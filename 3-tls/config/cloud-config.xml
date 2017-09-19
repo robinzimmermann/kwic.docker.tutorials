@@ -3,10 +3,10 @@
 
 
   <service>
-    <name>proxy service A</name>
+    <name>proxy service-a</name>
 
     <accept>tcp://@eth0:5551</accept>
-    <connect>pipe://serviceA</connect>
+    <connect>pipe://service-a</connect>
 
     <type>proxy</type>
 
@@ -15,39 +15,24 @@
       <socks.mode>reverse</socks.mode>
       <socks.transport>wss://example.com/kwic</socks.transport>
       <ws.inactivity.timeout>55 seconds</ws.inactivity.timeout>
-      <socks.ssl.verify-client>required</socks.ssl.verify-client>
+      <http.transport>tcp://@eth0:80</http.transport>
     </connect-options>
   </service>
 
-  <service>
-    <name>proxy service B</name>
 
-    <accept>wss://example.com:443/serviceB</accept>
+  <service>
+    <name>proxy service-b</name>
+
+    <accept>wss://example.com:443/service-b</accept>
     <connect>tcp://server-b:6661</connect>
 
     <type>proxy</type>
 
     <accept-options>
       <ws.inactivity.timeout>55 seconds</ws.inactivity.timeout>
-      <ssl.verify-client>required</ssl.verify-client>
+      <http.transport>tcp://@eth0:80</http.transport>
     </accept-options>
   </service>
-
-  <security>
-
-    <keystore>
-      <type>JCEKS</type>
-      <file>/x509/stores/keystore-cloud.jceks</file>
-      <password-file>/x509/stores/keystore-cloud.pw</password-file>
-    </keystore>
-
-    <truststore>
-      <type>JCEKS</type>
-      <file>/x509/stores/truststore-cloud.jceks</file>
-      <password-file>/x509/stores/truststore-cloud.pw</password-file>
-    </truststore>
-
-  </security>
 
 
 </gateway-config>
