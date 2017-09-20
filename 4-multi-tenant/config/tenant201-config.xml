@@ -3,9 +3,9 @@
 
 
   <service>
-    <name>proxy service C</name>
+    <name>proxy service-c</name>
 
-    <accept>pipe://serviceC</accept>
+    <accept>pipe://service-c</accept>
     <connect>tcp://server-c:5551</connect>
 
     <type>proxy</type>
@@ -20,10 +20,10 @@
 
 
   <service>
-    <name>proxy service D</name>
+    <name>proxy service-d</name>
 
     <accept>tcp://@eth0:6661</accept>
-    <connect>wsn+ssl://example.com:443/serviceD</connect>
+    <connect>wsn+ssl://example.com:443/service-d</connect>
 
     <type>proxy</type>
 

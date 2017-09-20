@@ -10,10 +10,10 @@
 
 
   <service>
-    <name>proxy service A</name>
+    <name>proxy service-a</name>
 
     <accept>tcp://@eth0:5551</accept>
-    <connect>pipe://serviceA-${cloud-node-hostname}</connect>
+    <connect>pipe://service-a-${cloud-node-hostname}</connect>
 
     <type>proxy</type>
 
@@ -28,9 +28,9 @@
 
 
   <service>
-    <name>balancer service B</name>
+    <name>balancer service-b</name>
 
-    <accept>wss://example.com:443/serviceB</accept>
+    <accept>wss://example.com:443/service-b</accept>
 
     <type>balancer</type>
 
@@ -45,11 +45,11 @@
 
 
   <service>
-    <name>proxy service B</name>
+    <name>proxy service-b</name>
 
-    <accept>wss://${cloud-node-hostname}:443/serviceB</accept>
+    <accept>wss://${cloud-node-hostname}:443/service-b</accept>
     <connect>tcp://server-b:6661</connect>
-    <balance>wss://example.com:443/serviceB</balance>
+    <balance>wss://example.com:443/service-b</balance>
 
     <type>proxy</type>
 

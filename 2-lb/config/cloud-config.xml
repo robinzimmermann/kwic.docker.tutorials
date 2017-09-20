@@ -3,10 +3,10 @@
 
 
   <service>
-    <name>proxy service A</name>
+    <name>proxy service-a</name>
 
     <accept>tcp://@eth0:5551</accept>
-    <connect>pipe://serviceA</connect>
+    <connect>pipe://service-a</connect>
 
     <type>proxy</type>
 
@@ -21,43 +21,10 @@
 
 
   <service>
-    <name>proxy service B</name>
+    <name>proxy service-b</name>
 
-    <accept>ws://example.com:80/serviceB</accept>
+    <accept>ws://example.com:80/service-b</accept>
     <connect>tcp://server-b:6661</connect>
-
-    <type>proxy</type>
-
-    <accept-options>
-      <ws.inactivity.timeout>55 seconds</ws.inactivity.timeout>
-      <http.transport>tcp://@eth0:80</http.transport>
-    </accept-options>
-  </service>
-
-
-  <service>
-    <name>proxy service C</name>
-
-    <accept>tcp://@eth0:7771</accept>
-    <connect>pipe://serviceC</connect>
-
-    <type>proxy</type>
-
-    <connect-options>
-      <pipe.transport>socks://example.com</pipe.transport>
-      <socks.mode>reverse</socks.mode>
-      <socks.transport>ws://example.com/kwic</socks.transport>
-      <ws.inactivity.timeout>55 seconds</ws.inactivity.timeout>
-      <http.transport>tcp://@eth0:80</http.transport>
-    </connect-options>
-  </service>
-
-
-  <service>
-    <name>proxy service D</name>
-
-    <accept>ws://example.com:80/serviceD</accept>
-    <connect>tcp://server-d:8881</connect>
 
     <type>proxy</type>
 

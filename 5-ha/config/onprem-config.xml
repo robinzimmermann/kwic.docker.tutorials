@@ -3,9 +3,9 @@
 
 
   <service>
-    <name>proxy service A from cloud1</name>
+    <name>proxy service-a from cloud1</name>
 
-    <accept>pipe://serviceA-cloud1.example.com</accept>
+    <accept>pipe://service-a-cloud1.example.com</accept>
     <connect>tcp://server-a:5551</connect>
 
     <type>proxy</type>
@@ -20,9 +20,9 @@
 
 
   <service>
-    <name>proxy service A from cloud2</name>
+    <name>proxy service-a from cloud2</name>
 
-    <accept>pipe://serviceA-cloud2.example.com</accept>
+    <accept>pipe://service-a-cloud2.example.com</accept>
     <connect>tcp://server-a:5551</connect>
 
     <type>proxy</type>
@@ -37,10 +37,10 @@
 
 
   <service>
-    <name>proxy service B</name>
+    <name>proxy service-b</name>
 
     <accept>tcp://@eth0:6661</accept>
-    <connect>wsn+ssl://example.com:443/serviceB</connect>
+    <connect>wsn+ssl://example.com:443/service-b</connect>
 
     <type>proxy</type>
 
