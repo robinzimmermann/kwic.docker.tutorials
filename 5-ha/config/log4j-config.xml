@@ -92,6 +92,12 @@
         <appender-ref ref="STDOUT"/>
     </logger>
 
+    <!-- Used for update property -->
+    <logger name="org.kaazing.gateway.update.check">
+        <level value="off"/>
+        <appender-ref ref="STDOUT"/>
+    </logger>
+
     <!-- Used for Gateway services. Specific loggers can also be added like "service.jms" -->
     <logger name="service">
         <level value="info"/>
@@ -99,11 +105,6 @@
 
     <logger name="kwic">
         <level value="debug"/>
-        <appender-ref ref="STDOUT"/>
-    </logger>
-
-    <logger name="service.balancer">
-        <level value="all"/>
         <appender-ref ref="STDOUT"/>
     </logger>
 
