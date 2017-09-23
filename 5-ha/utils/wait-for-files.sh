@@ -1,31 +1,39 @@
-#!/bin/bash
+#!/bin/sh
+
+# This is easier to script in bash, but not all Docker images have
+# the bash shell installed. So using sh instead.
 
 CMD_NAME=$(basename $0)
-FILES=( "$@" )
 
-echo "${CMD_NAME}: Waiting for ${FILES[@]}"
+FILES=""
+for var in "$@"
+do
+  FILES="${FILES} $var"
+done
+
+echo "${CMD_NAME}: Waiting for ${FILES}"
 while true
 do
 
-  for i in "${!FILES[@]}"
+  for file in ${FILES}
   do
-
-    file=${FILES[i]}
 
     if [ -f $file ]
     then
       echo "${CMD_NAME}: Found $file"
-      unset FILES[i]
+      # Remove the found file from the list
+      safe_pattern=$(printf '%s' "$file" | sed 's/[[\.*^$/]/\\&/g')
+      FILES=`echo ${FILES} | sed -E "s/${safe_pattern}//"`
     fi
-
-    if [ ${#FILES[@]} -eq 0 ]
-    then
-      echo "${CMD_NAME}: All files found, moving on."
-      exit 0
-    fi
-
 
   done
+
+  # Check if the list is empty
+  if [ "x${FILES}" = "x" ]
+  then
+    echo "${CMD_NAME}: All files found, moving on."
+    exit 0
+  fi
 
   sleep 1
 
