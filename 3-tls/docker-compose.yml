@@ -48,8 +48,6 @@ services:
       - x509:/x509:ro
     networks:
       kwic-net:
-    ports:
-      - "80:80"
     command: sh -c "/wait-for-files.sh
                          /x509/certs/example.com.crt
                          /x509/certs/example.com.key
